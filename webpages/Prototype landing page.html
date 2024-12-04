@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intranet Landing Page</title>
+	<script src="https://kit.fontawesome.com/cbddf15915.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	
+	<style>
+	/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFE0;
+    margin: 0;
+    color: #000000;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d3d3d3;
+    padding: 15px 30px;
+}
+
+.navigation-header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigation-header ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+.navigation-header ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ebb200;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.signin {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+/* Main Content */
+.main-content {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+	padding: 12px;
+
+	
+}
+
+.btn {
+    background-color: #f3c601;
+    color: #000000;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 4em;
+    cursor: pointer;
+    border: 2px  solid black; 
+}
+
+.btn:hover {
+    background-color: #ebb200;
+}
+
+/* Footer */
+footer {
+    background-color: #dedede;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+/* Warnings and Error Messages */
+.warning {
+    background-color: #b45809;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+.error {
+    background-color: #b44900;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Dropdown menu */
+.icon-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.icon-dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #ebb200;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.icon-dropdown-content a {
+    color: #000000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.icon-dropdown-content a:hover {
+    background-color: #f3c601;
+}
+
+/* Show the dropdown menu on hover */
+.icon-dropdown:hover .icon-dropdown-content {
+    display: block;
+}
+
+	</style>
+	
+	<nav>
+		<div class="navbar-left">
+            <img src="logo.png" alt="Company Logo" class="logo">
+        </div>
+		<div class = "navigation-header">
+			<ul>
+				<li><a href="#home">Dashboard</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#calendar">Calendar</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Support</a>
+                    <div class="dropdown-content">
+                        <a href="#section4">FAQs</a>
+                        <a href="#section5">Submit a Ticket</a>
+						<a href="#section5">Contact IT</a>
+					</div>
+				</li>
+				<li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="#section4">Admin Documents</a>
+                        <a href="#section5">Technical Manuals</a>
+						<a href="#section5">Non-Technical Manuals</a>
+					</div>
+				</li>
+				<div class="navbar-left">
+				<!-- Icon with dropdown menu -->
+					<div class="icon-dropdown">
+						<class="icon"><i class="fa-solid fa-user"></i>
+						<div class="icon-dropdown-content">
+						<a href="login.html"> Login</a>
+						<a href="register.html">Register</a>
+						<a href="#settings">Settings</a>
+						</div>
+					</div>
+				</div>
+				
+			</ul>
+			
+        </div>
+		</div>
+		 
+						
+				
+	</nav>
+	
+	<!-- Main Content Section -->
+    <section class="main-content">
+        <h1>Welcome to Build It All Intranet</h1>
+        <p>This is where you can find all the information about your intranet system, its features, and how it benefits you.<br> This intranet was designed to replace your current manual system with a more efficient and user friendly solution.</p>
+		
+		<h2>Key Features: </h2>
+		<h3><b>Tailored for Admin and Support Staff:</b></h3>
+		<p>The intranet is designed to simplify routine administrative tasks,<br> offering easier navigation and quicker access to important company resources. <br> As well as, helping employees and teams stay organised and work more efficiently. </p>
+		<h3>Technical Specialists’ Hub:</h3>
+		<p>A dedicated section for technical staff, providing streamlined access to technical <br>documentation, maintenance logs, and system updates. </p>
+        <h3>To-Do List & Task Management:</h3>
+		<p>Employees will be able to create, track, and manage their daily tasks<br> through an intuitive to-do list feature. For team leaders and managers, a dedicated<br> dashboard will allow for better visibility into project progress, helping to balance <br> workloads and ensure tasks are completed on time.</p>
+		<h3>Manager’s Dashboard:</h3>
+		<p>The dashboard will provide managers with a clear overview of team progress,<br> individual workloads, and overall project status. This feature will be key to<br> improving resource allocation, monitoring task completion, and balancing team efficiency.</p>
+		<h3>Knowledge Management:</h3>
+		<p>Employees can create and share knowledge through "Topics" and "Posts." <br>These can range from technical knowledge such as software configurations or solutions <br> to technical issues, to administrative guidance such as how to order office supplies</p>
+		<h3>User Access and Security: </h3>
+		<p>Access to the system will be secure, with employee registration limited to <br>internal staff via their company email addresses. Strong password protection will ensure<br> the security of the system, and we will enforce policies to prevent the creation of <br>duplicate or unauthorized accounts.</p>
+		
+		
+		
+		
+		<div class="buttons">
+            <a href = "Login.html" <button class="btn">  Login  </button> </a>
+            <a href = "register.html" <button class="btn">Register</button> </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Build It All Intranet | All rights reserved.</p>
+    </footer>
+</body>
+</html>

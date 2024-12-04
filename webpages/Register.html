@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form and Intranet Page</title>
+    <script src="https://kit.fontawesome.com/cbddf15915.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFFFE0;
+            margin: 0;
+            color: #000000;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #d3d3d3;
+            padding: 15px 30px;
+        }
+
+        .navigation-header ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navigation-header ul li {
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .navigation-header ul li a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ebb200;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .navbar-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .signin {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .logo {
+            height: 40px;
+            width: auto;
+        }
+
+        /* Main Content */
+        .main-content {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        /* Buttons */
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 200px;
+            padding: 12px;
+        }
+
+        .btn {
+            background-color: #f3c601;
+            color: #000000;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 4em;
+            cursor: pointer;
+            border: 2px solid black;
+        }
+
+        .btn:hover {
+            background-color: #ebb200;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #dedede;
+            color: #000000;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+        }
+
+        .warning {
+            background-color: #b45809;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .error {
+            background-color: #b44900;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Dropdown Menu */
+        .icon-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .icon {
+            height: 40px;
+            width: 40px;
+            cursor: pointer;
+        }
+
+        .icon-dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #ebb200;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .icon-dropdown-content a {
+            color: #000000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .icon-dropdown-content a:hover {
+            background-color: #f3c601;
+        }
+
+        .icon-dropdown:hover .icon-dropdown-content {
+            display: block;
+        }
+
+        /* Register Form Styling */
+        .register-container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .register-form {
+            background-color: #f3f3f3;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 90%;
+        }
+
+        .register-form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .register-form input[type="text"],
+        .register-form input[type="email"],
+        .register-form input[type="password"],
+        .register-form input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .register-form label {
+            font-weight: bold;
+        }
+
+        .register-form .submit-btn {
+            width: 100%;
+            background-color: #f3c601;
+            color: #000000;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .register-form .submit-btn:hover {
+            background-color: #ebb200;
+        }
+
+        .register-form .error-message {
+            color: red;
+            font-size: 0.9em;
+        }
+
+        .register-form .checkbox {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+
+        .register-form .checkbox input {
+            margin-right: 10px;
+        }
+
+        .register-form .terms-label {
+            font-size: 0.9em;
+        }
+		.password-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .eye-icon {
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="navbar-left">
+            <img src="logo.png" alt="Company Logo" class="logo">
+        </div>
+        <div class="navigation-header">
+            <ul>
+                <li><a href="#home">Dashboard</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#calendar">Calendar</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Support</a>
+                    <div class="dropdown-content">
+                        <a href="#section4">FAQs</a>
+                        <a href="#section5">Submit a Ticket</a>
+                        <a href="#section5">Contact IT</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="#section4">Admin Documents</a>
+                        <a href="#section5">Technical Manuals</a>
+                        <a href="#section5">Non-Technical Manuals</a>
+                    </div>
+                </li>
+				<div class="icon-dropdown">
+						<class="icon"><i class="fa-solid fa-user"></i>
+						<div class="icon-dropdown-content">
+						<a href="login.html"> Login</a>
+						<a href="register.html">Register</a>
+						<a href="#settings">Settings</a>
+						</div>
+					</div>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Register Form (Moved Below Nav Bar) -->
+    <div class="register-container">
+        <form class="register-form" id="registerForm">
+            <h1>Register</h1>
+
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="email">Email (@make-it-all.co.uk)</label>
+            <input type="email" id="email" name="email"  required>
+            <div class="error-message" id="emailError"></div>
+
+            <label for="contact">Contact Number</label>
+            <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" required>
+
+            <label for="password">Password</label>
+			<div class="password-wrapper">
+				<input type="password" id="password" name="password" required>
+				<i class="fa fa-eye eye-icon" id="togglePassword"></i>
+            </div>
+            <div class="error-message" id="passwordError"></div>
+
+            <label for="confirmPassword">Confirm Password</label>
+			<div class="password-wrapper">
+				<input type="password" id="confirmPassword" name="confirmPassword" required>
+				<i class="fa fa-eye eye-icon" id="toggleConfirmPassword"></i>
+            </div>
+            <div class="error-message" id="confirmPasswordError"></div>
+
+            <div class="checkbox">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms" class="terms-label">I agree to the <a href="#">Terms and Conditions</a></label>
+            </div>
+
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Build It All Intranet | All rights reserved.</p>
+    </footer>
+
+    <script>
+        const existingEmails = ["test1@make-it-all.co.uk", "test2@make-it-all.co.uk"];
+
+        function validatePassword() {
+            const password = document.getElementById("password").value;
+            const passwordError = document.getElementById("passwordError");
+
+            const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{12,}$/;
+            if (!passwordRegex.test(password)) {
+                passwordError.textContent = "Password must be at least 12 characters long and contain at least one uppercase letter, one number, and one special character.";
+                return false;
+            } else {
+                passwordError.textContent = "";
+                return true;
+            }
+        }
+
+        function validateConfirmPassword() {
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+            const confirmPasswordError = document.getElementById("confirmPasswordError");
+
+            if (password !== confirmPassword) {
+                confirmPasswordError.textContent = "Passwords do not match.";
+                return false;
+            } else {
+                confirmPasswordError.textContent = "";
+                return true;
+            }
+        }
+
+        function validateEmail() {
+            const email = document.getElementById("email").value;
+            const emailError = document.getElementById("emailError");
+			
+			const emailRegex = /^[a-zA-Z0-9._%+-]+@make-it-all\.co\.uk$/;
+            if (!emailRegex.test(email)) {
+                emailError.textContent = "Email must end with @make-it-all.co.uk.";
+                return false;
+            }
+
+            if (existingEmails.includes(email)) {
+                emailError.textContent = "Email is already registered.";
+                return false;
+            } else {
+                emailError.textContent = "";
+                return true;
+            }
+        }
+		document.getElementById("togglePassword").addEventListener("click", function () {
+            const passwordField = document.getElementById("password");
+            const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+            passwordField.setAttribute("type", type);
+            this.classList.toggle("fa-eye-slash");
+        });
+
+        document.getElementById("toggleConfirmPassword").addEventListener("click", function () {
+            const confirmPasswordField = document.getElementById("confirmPassword");
+            const type = confirmPasswordField.getAttribute("type") === "password" ? "text" : "password";
+            confirmPasswordField.setAttribute("type", type);
+            this.classList.toggle("fa-eye-slash");
+        });
+		
+
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form from submitting
+            const isPasswordValid = validatePassword();
+            const isConfirmPasswordValid = validateConfirmPassword();
+            const isEmailValid = validateEmail();
+
+            if (isPasswordValid && isConfirmPasswordValid && isEmailValid) {
+                alert("Registration successful! Please check your email for the activation link.");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

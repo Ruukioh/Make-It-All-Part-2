@@ -1,0 +1,440 @@
+<!--
+=========================================================
+ Light Bootstrap Dashboard - v2.0.1
+=========================================================
+
+ Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard
+ Copyright 2019 Creative Tim (https://www.creative-tim.com)
+ Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE)
+
+ Coded by Creative Tim
+
+=========================================================
+
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  -->
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="utf-8" />
+     <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+     <link rel="icon" type="image/png" href="../../assets/img/favicon.ico">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+     <title>Make-It-All</title>
+     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+     <!--     Fonts and icons     -->
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+     <!-- CSS Files -->
+     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+     <link href="../../assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
+     <!-- CSS Just for demo purpose, don't include it in your project -->
+     <link href="../../assets/css/demo.css" rel="stylesheet" />
+     
+     <style>
+     
+         .container {
+             max-width: 800px;
+             margin: 0 auto;
+         }
+         h1, h2 {
+             color: #333;
+             text-align: center;
+         }
+         .content-form, .content-list {
+             background-color: #fff;
+             padding: 20px;
+             margin: 20px 0;
+             border-radius: 8px;
+             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+         }
+         .content-form label, .content-form input, .content-form textarea {
+             display: block;
+             width: 100%;
+             margin-bottom: 10px;
+         }
+         .content-form input[type="text"], .content-form textarea {
+             padding: 10px;
+             border: 1px solid #ddd;
+             border-radius: 5px;
+         }
+         .content-form button {
+             background-color: #007bff;
+             color: #fff;
+             padding: 10px 15px;
+             border: none;
+             border-radius: 5px;
+             cursor: pointer;
+         }
+         .content-form button:hover {
+             background-color: #0056b3;
+         }
+         .content-item {
+             border-bottom: 1px solid #ddd;
+             padding: 10px 0;
+         }
+         .content-item:last-child {
+             border-bottom: none;
+         }
+         .content-item h3 {
+             margin: 0;
+         }
+         .content-item p {
+             color: #555;
+         }
+         .content-item button {
+             margin-right: 10px;
+             background-color: #f44336;
+             color: #fff;
+             border: none;
+             border-radius: 5px;
+             padding: 5px 10px;
+             cursor: pointer;
+         }
+         .content-item button.edit {
+             background-color: #4caf50;
+         }
+         .content-item button:hover {
+             opacity: 0.8;
+         }
+     </style>
+ </head>
+ 
+ <body>
+     <div class="wrapper">
+         <div class="sidebar" data-color="grey">
+             <!--
+         Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+ 
+         Tip 2: you can also add an image using data-image tag
+     -->
+             <div class="sidebar-wrapper">
+                <div class="logo">
+                    <img style="height: 100%; width: 100%; object-fit: contain" src="../logo.png">
+                </div>
+
+                <ul class="nav">
+                    <li>
+                        <a class="nav-link" href="./admin-dashboard.html">
+                            <i class="nc-icon nc-chart-pie-35"></i>
+                            <p>My Dashboard</p>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a class="nav-link" href="./notifications.html">
+                            <i class="nc-icon nc-bell-55"></i>
+                            <p>My Notifications</p>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a class="nav-link" href="./user-profile.html">
+                            <i class="nc-icon nc-circle-09"></i>
+                            <p>My Profile</p>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a class="nav-link" href="./shared-knowledge.html">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>Shared Knowledge</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="./forum.html">
+                            <i class="nc-icon nc-notes"></i>
+                            <p>Forum</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="./manage-tags.html">
+                            <i class="nc-icon nc-tag-content"></i>
+                            <p>Manage Tags</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="./manage-users.html">
+                            <i class="nc-icon nc-single-02"></i>
+                            <p>Manage Users</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./manage-content.html">
+                            <i class="nc-icon nc-grid-45"></i>
+                            <p>Manage Content</p>
+                        </a>
+                    </li>
+                </ul>
+             </div>
+         </div>
+         <div class="main-panel">
+             <!-- Navbar -->
+             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
+                 <div class="container-fluid">
+                     <a class="navbar-brand" href="#pablo"> Dashboard </a>
+                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                         <span class="navbar-toggler-bar burger-lines"></span>
+                         <span class="navbar-toggler-bar burger-lines"></span>
+                         <span class="navbar-toggler-bar burger-lines"></span>
+                     </button>
+                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                         <ul class="nav navbar-nav mr-auto">
+                             <li class="nav-item">
+                                 <a href="#dashboard.html" class="nav-link" data-toggle="dropdown">
+                                 </a>
+                             </li>
+                             <li class="dropdown nav-item">
+                                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                                     <i class="nc-icon nc-bell-55"></i>
+                                     <span class="notification">5</span>
+                                     <span class="d-lg-none">Notification</span>
+                                 </a>
+                                 <ul class="dropdown-menu">
+                                     <a class="dropdown-item" href="#">Request</a>
+                                     <a class="dropdown-item" href="#">New article to be checked</a>
+                                     <a class="dropdown-item" href="#">New user added</a>
+                                     <a class="dropdown-item" href="#">Please change Eric to a Team Leader</a>
+                                     <a class="dropdown-item" href="#">Remove Dave for system</a>
+                                 </ul>
+                             </li>
+      
+                         </ul>
+                         <ul class="navbar-nav ml-auto">
+
+                             <li class="nav-item">
+                                 <a class="nav-link" href="../login.html">
+                                     <span class="no-icon">Log out</span>
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+             </nav>
+
+
+
+             <!-- End Navbar -->
+         <div class="container">
+             <h1>Content Management</h1>
+             <div class="content-form">
+                 <h2>Add / Edit Content</h2>
+                 <label for="title">Title</label>
+                 <input type="text" id="title" placeholder="Enter title" required>
+                     
+                 <label for="description">Description</label>
+                 <textarea id="description" rows="4" placeholder="Enter description" required></textarea>
+                     
+                 <button onclick="addOrUpdateContent()">Save Content</button>
+             </div>
+             
+             <div class="card mb-4">
+             <div class="card-header">
+                 <h4>Add New Knowledge Area</h4>
+             </div>
+             <div class="card-body">
+                 <form id="addKnowledgeForm">
+                     <div class="form-group">
+                         <label for="newKnowledgeArea">Knowledge Area Name:</label>
+                         <input type="text" class="form-control" id="newKnowledgeArea" placeholder="Enter knowledge area name" required>
+                     </div>
+                     <button type="button" class="btn btn-primary" onclick="addKnowledgeArea()">Add Knowledge Area</button>
+                 </form>
+             </div>
+         <div class="card mb-4">
+             <div class="card-header">
+                 <h4>Existing Knowledge Areas</h4>
+             </div>
+             <div class="card-body">
+                 <input type="text" class="form-control mb-3" id="searchKnowledge" placeholder="Search knowledge areas" onkeyup="filterKnowledgeAreas()">
+                 <ul class="list-group" id="knowledgeAreaList">
+                     <!-- Sample knowledge areas (replace with dynamic data as needed) -->
+                     <li class="list-group-item d-flex justify-content-between align-items-center">
+                         Software Development
+                         <span>
+                             <button class="btn btn-warning btn-sm mr-2" onclick="editKnowledgeArea(this)">Edit</button>
+                             <button class="btn btn-danger btn-sm" onclick="deleteKnowledgeArea(this)">Delete</button>
+                         </span>
+                     </li>
+                     <li class="list-group-item d-flex justify-content-between align-items-center">
+                         Hardware Configuration
+                         <span>
+                             <button class="btn btn-warning btn-sm mr-2" onclick="editKnowledgeArea(this)">Edit</button>
+                             <button class="btn btn-danger btn-sm" onclick="deleteKnowledgeArea(this)">Delete</button>
+                         </span>
+                     </li>
+                 </ul>
+             </div>
+         </div>
+         <!-- Assign Knowledge Areas to Users -->
+         <div class="card mb-4">
+             <div class="card-header">
+                 <h4>Assign Knowledge Areas to Users</h4>
+             </div>
+             <div class="card-body">
+                 <form id="assignKnowledgeAreaForm">
+                     <div class="form-group">
+                         <label for="assignKnowledgeArea">Select Knowledge Area:</label>
+                         <select class="form-control" id="assignKnowledgeArea">
+                             <option>Software Development</option>
+                             <option>Hardware Configuration</option>
+                             <!-- Add more options dynamically -->
+                         </select>
+                     </div>
+                     <div class="form-group">
+                         <label for="userEmail">User Email:</label>
+                         <input type="email" class="form-control" id="userEmail" placeholder="Enter user's email" required>
+                     </div>
+                     <button type="submit" class="btn btn-success" onclick="assignKnowledgeArea()">Assign Knowledge Area</button>
+                 </form>
+             </div>
+         </div>
+             
+
+         </div>
+     </div>
+
+
+
+
+ </body>
+ <!--   Core JS Files   -->
+ <script src="../../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+ <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+ <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+ <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+ <script src="../../assets/js/plugins/bootstrap-switch.js"></script>
+ <!--  Google Maps Plugin    -->
+ <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+ <!--  Chartist Plugin  -->
+ <script src="../../assets/js/plugins/chartist.min.js"></script>
+ <!--  Notifications Plugin    -->
+ <script src="../../assets/js/plugins/bootstrap-notify.js"></script>
+ <!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
+ <script src="../../assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
+ <!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
+ <script src="../../assets/js/demo.js"></script>
+ <script>
+     let contentArray = [];
+     let editIndex = null;
+ 
+     // Function to add or update content
+     function addOrUpdateContent() {
+         const title = document.getElementById('title').value.trim();
+         const description = document.getElementById('description').value.trim();
+ 
+         if (title && description) {
+             if (editIndex !== null) {
+                 // Update existing content
+                 contentArray[editIndex] = { title, description };
+                 editIndex = null;
+             } else {
+                 // Add new content
+                 contentArray.push({ title, description });
+             }
+ 
+             document.getElementById('title').value = '';
+             document.getElementById('description').value = '';
+             displayContent();
+         } else {
+             alert("Please enter both title and description.");
+         }
+     }
+ 
+     // Function to display content list
+     function displayContent() {
+         const contentItems = document.getElementById('contentItems');
+         contentItems.innerHTML = '';
+ 
+         contentArray.forEach((content, index) => {
+             const contentDiv = document.createElement('div');
+             contentDiv.classList.add('content-item');
+             contentDiv.innerHTML = `
+                 <h3>${content.title}</h3>
+                 <p>${content.description}</p>
+                 <button class="edit" onclick="editContent(${index})">Edit</button>
+                 <button onclick="deleteContent(${index})">Delete</button>
+             `;
+             contentItems.appendChild(contentDiv);
+         });
+     }
+ 
+     // Function to edit content
+     function editContent(index) {
+         document.getElementById('title').value = contentArray[index].title;
+         document.getElementById('description').value = contentArray[index].description;
+         editIndex = index;
+     }
+ 
+     // Function to delete content
+     function deleteContent(index) {
+         if (confirm("Are you sure you want to delete this content?")) {
+             contentArray.splice(index, 1);
+             displayContent();
+         }
+     }
+ function addKnowledgeArea() {
+     const knowledgeName = document.getElementById("newKnowledgeArea").value.trim();
+     if (knowledgeName) {
+         const list = document.getElementById("knowledgeAreaList");
+         const item = document.createElement("li");
+         item.className = "list-group-item d-flex justify-content-between align-items-center";
+         item.innerHTML = `
+             ${knowledgeName}
+             <span>
+                 <button class="btn btn-warning btn-sm mr-2" onclick="editKnowledgeArea(this)">Edit</button>
+                 <button class="btn btn-danger btn-sm" onclick="deleteKnowledgeArea(this)">Delete</button>
+             </span>
+         `;
+         list.appendChild(item);
+         document.getElementById("newKnowledgeArea").value = "";
+     } else {
+         alert("Please enter a valid knowledge area name.");
+     }
+ }
+ 
+ function deleteKnowledgeArea(button) {
+     if (confirm("Are you sure you want to delete this knowledge area?")) {
+         const item = button.closest("li");
+         item.remove();
+     }
+ }
+ 
+ function editKnowledgeArea(button) {
+     const item = button.closest("li");
+     const currentName = item.childNodes[0].textContent.trim();
+     const newName = prompt("Edit Knowledge Area:", currentName);
+     if (newName) {
+         item.childNodes[0].textContent = newName;
+     }
+ }
+ 
+ function assignKnowledgeArea() {
+     const knowledgeArea = document.getElementById("assignKnowledgeArea").value;
+     const userEmail = document.getElementById("userEmail").value.trim();
+     if (userEmail && knowledgeArea) {
+         alert(`Assigned ${knowledgeArea} to ${userEmail}`);
+     } else {
+         alert("Please select a knowledge area and enter a valid email.");
+     }
+ }
+ 
+ function filterKnowledgeAreas() {
+     const searchValue = document.getElementById("searchKnowledge").value.toLowerCase();
+     const items = document.getElementById("knowledgeAreaList").getElementsByTagName("li");
+     Array.from(items).forEach(item => {
+         const itemName = item.childNodes[0].textContent.toLowerCase();
+         item.style.display = itemName.includes(searchValue) ? "" : "none";
+     });
+ }
+ 
+ </script>
+ 
+ </html>
+ 

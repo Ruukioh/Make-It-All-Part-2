@@ -1,0 +1,377 @@
+<!-- 
+=========================================================
+ Light Bootstrap Dashboard - v2.0.1
+=========================================================
+
+ Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard
+ Copyright 2019 Creative Tim (https://www.creative-tim.com)
+ Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE)
+
+ Coded by Creative Tim
+
+=========================================================
+
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  -->
+
+ <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Make It All</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!-- Fonts and icons -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
+</head>
+
+<style>
+	.container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        .user-form, .user-list {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .user-form label, .user-form input, .user-form select {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .user-form input[type="text"], .user-form select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .user-form button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .user-form button:hover {
+            background-color: #0056b3;
+        }
+        .user-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .user-item:last-child {
+            border-bottom: none;
+        }
+        .user-item h3 {
+            margin: 0;
+        }
+        .user-item p {
+            color: #555;
+        }
+        .user-item button {
+            margin-right: 10px;
+            background-color: #f44336;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .user-item button.edit {
+            background-color: #4caf50;
+        }
+        .user-item button.deactivate {
+            background-color: #f44336;
+        }
+        .user-item button:hover {
+            opacity: 0.8;
+        }
+        .user-role {
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+
+
+
+
+
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar" data-color="grey">
+
+            <!-- 
+            When using the page template to create each page:
+            - remove class="nav-item active" from <li> of dashboard (unless you're creating the dashboard)
+            - add class="nav-item actiev" to the <li> of the page you are creating
+            -->
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <img style="height: 100%; width: 100%; object-fit: contain" src="../logo.png">
+                </div>
+
+                <ul class="nav">
+                    <li>
+                        <a class="nav-link" href="./admin-dashboard.html">
+                            <i class="nc-icon nc-chart-pie-35"></i>
+                            <p>My Dashboard</p>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a class="nav-link" href="./notifications.html">
+                            <i class="nc-icon nc-bell-55"></i>
+                            <p>My Notifications</p>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a class="nav-link" href="./user-profile.html">
+                            <i class="nc-icon nc-circle-09"></i>
+                            <p>My Profile</p>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a class="nav-link" href="./shared-knowledge.html">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>Shared Knowledge</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="./forum.html">
+                            <i class="nc-icon nc-notes"></i>
+                            <p>Forum</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="./manage-tags.html">
+                            <i class="nc-icon nc-tag-content"></i>
+                            <p>Manage Tags</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./manage-users.html">
+                            <i class="nc-icon nc-single-02"></i>
+                            <p>Manage Users</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="./manage-content.html">
+                            <i class="nc-icon nc-grid-45"></i>
+                            <p>Manage Content</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg " color-on-scroll="500">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#pablo"> Dashboard </a>
+                    <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <ul class="nav navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" data-toggle="dropdown">
+                                    <span class="d-lg-none">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="dropdown nav-item">
+                                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                                    <i class="nc-icon nc-bell-55"></i>
+                                    <span class="notification">5</span>
+                                    <span class="d-lg-none">Notification</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Request</a>
+                                    <a class="dropdown-item" href="#">New article to be checked</a>
+                                    <a class="dropdown-item" href="#">New user added</a>
+                                    <a class="dropdown-item" href="#">Please change Eric to a Team Leader</a>
+                                    <a class="dropdown-item" href="#">Remove Dave for system</a>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../login.html">
+                                    <span class="no-icon">Log out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+
+
+            <!-- Insert Page Content Below -->
+
+
+            
+            <div class="container">
+				<h1>User Management</h1>
+				
+			   <div class="user-form">
+					<h2>Add / Edit User</h2>
+					<label for="name">Name</label>
+					<input type="text" id="name" placeholder="Enter name" required>
+			
+					<label for="email">Email</label>
+					<input type="text" id="email" placeholder="Enter email (e.g., user@make-it-all.co.uk)" required>
+					<label for="role">Role</label>
+					<select id="role">
+						<option value="Project Manager">Project Manager</option>
+						<option value="Team Leader">Team Leader</option>
+						<option value="Team Member">Team Member</option>
+						<option value="Admin">Admin</option>
+					</select>
+					 <button onclick="addOrUpdateUser()">Save User</button>
+				</div>
+				<div class="user-list">
+					<h2>User List</h2>
+					<div id="userItems"></div>
+				</div>
+			</div>
+				
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav>
+
+                        <p class="copyright text-center">
+                            ©
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
+                            <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                        </p>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+<!--   Core JS Files   -->
+<script src="../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="../assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!--  Chartist Plugin  -->
+<script src="../assets/js/plugins/chartist.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="../assets/js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
+<script src="../assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
+<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
+<script src="../assets/js/demo.js"></script>
+<script>
+let users = [
+	{ name: "Alice Johnson", email: "a.johnson@make-it-all.co.uk", role: "Project Manager", active: true },
+	{ name: "Bob Smith", email: "b.smith@make-it-all.co.uk", role: "Team Leader", active: true },
+	{ name: "Charlie Brown", email: "c.brown@make-it-all.co.uk", role: "Team Member", active: true },
+	{ name: "Dana White", email: "d.white@make-it-all.co.uk", role: "Admin", active: true }
+	
+];
+let editIndex = null;
+
+// Function to add or update user
+function addOrUpdateUser() {
+	const name = document.getElementById('name').value.trim();
+	const email = document.getElementById('email').value.trim();
+	const role = document.getElementById('role').value;
+
+	if (name && email.endsWith("@make-it-all.co.uk")) {
+		if (editIndex !== null) {
+			// Update existing user
+			users[editIndex] = { name, email, role, active: true };
+			editIndex = null;
+		} else {
+			// Add new user
+			users.push({ name, email, role, active: true });
+		}
+
+		// Clear input fields
+		document.getElementById('name').value = '';
+		document.getElementById('email').value = '';
+		document.getElementById('role').value = 'Project Manager';
+		displayUsers();
+	} else {
+		alert("Please enter a valid name and email ending with '@make-it-all.co.uk'.");
+	}
+}
+
+// Function to display user list
+function displayUsers() {
+	const userItems = document.getElementById('userItems');
+	userItems.innerHTML = '';
+
+	users.forEach((user, index) => {
+		const userDiv = document.createElement('div');
+		userDiv.classList.add('user-item');
+		userDiv.innerHTML = `
+			<h3>${user.name}</h3>
+			<p><strong>Email:</strong> ${user.email}</p>
+			<p class="user-role"><strong>Role:</strong> ${user.role}</p>
+			<button class="edit" onclick="editUser(${index})">Edit</button>
+			<button class="deactivate" onclick="deactivateUser(${index})">${user.active ? "Deactivate" : "Activate"}</button>
+		`;
+		userItems.appendChild(userDiv);
+	});
+}
+
+// Function to edit user
+function editUser(index) {
+	document.getElementById('name').value = users[index].name;
+	document.getElementById('email').value = users[index].email;
+	document.getElementById('role').value = users[index].role;
+	editIndex = index;
+}
+
+// Function to deactivate or activate user
+function deactivateUser(index) {
+	users[index].active = !users[index].active;
+	displayUsers();
+}
+
+// Initial display
+displayUsers();
+</script>
+
+</html>
+
+
+ 
+

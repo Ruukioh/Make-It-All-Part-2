@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://kit.fontawesome.com/cbddf15915.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFFFE0;
+            margin: 0;
+            color: #000000;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #d3d3d3;
+            padding: 15px 30px;
+        }
+
+        .navbar-left img {
+            height: 40px;
+        }
+		.navigation-header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigation-header ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+.navigation-header ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ebb200;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.signin {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+.icon {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.icon-dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #ebb200;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.icon-dropdown-content a {
+    color: #000000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.icon-dropdown-content a:hover {
+    background-color: #f3c601;
+}
+
+/* Show the dropdown menu on hover */
+.icon-dropdown:hover .icon-dropdown-content {
+    display: block;
+}
+
+        /* Login Form Container */
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .login-form {
+            background-color: #f3f3f3;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 90%;
+        }
+
+        .login-form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-form input[type="email"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-form label {
+            font-weight: bold;
+        }
+
+        .login-form .submit-btn {
+            width: 100%;
+            background-color: #f3c601;
+            color: #000000;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .login-form .submit-btn:hover {
+            background-color: #ebb200;
+        }
+
+        .login-form .error-message {
+            color: #b44900;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .login-form .register-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .login-form .register-link a {
+            color: #000000;
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #dedede;
+            color: #000000;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+		.password-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+		.eye-icon {
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <div class="navbar-left">
+        <img src="logo.png" alt="Company Logo" class="logo">
+    </div>
+	<div class = "navigation-header">
+			<ul>
+				<li><a href="#home">Dashboard</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#calendar">Calendar</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Support</a>
+                    <div class="dropdown-content">
+                        <a href="#section4">FAQs</a>
+                        <a href="#section5">Submit a Ticket</a>
+						<a href="#section5">Contact IT</a>
+					</div>
+				</li>
+				<li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="#section4">Admin Documents</a>
+                        <a href="#section5">Technical Manuals</a>
+						<a href="#section5">Non-Technical Manuals</a>
+					</div>
+				</li>
+				<div class="navbar-left">
+				<!-- Icon with dropdown menu -->
+					<div class="icon-dropdown">
+						<class="icon"><i class="fa-solid fa-user icon"></i>
+						<div class="icon-dropdown-content">
+						<a href="login.html"> Login</a>
+						<a href="register.html">Register</a>
+						<a href="#settings">Settings</a>
+						</div>
+					</div>
+				</div>
+				
+			</ul>
+			
+        </div>
+		</div>
+</nav>
+
+<!-- Login Form -->
+<div class="login-container">
+    <form class="login-form" id="loginForm">
+        <h1>Login</h1>
+
+        <label for="email">Email (@make-it-all.co.uk)</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="password">Password</label>
+		<div class="password-wrapper">
+			<input type="password" id="password" name="password" placeholder="Enter your password" required>
+			<i class="fa fa-eye eye-icon" id="togglePassword"></i>
+        </div>
+        <div class="error-message" id="errorMessage"></div>
+
+        <button type="submit" class="submit-btn">Login</button>
+
+        <div class="register-link">
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </div>
+    </form>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Build It All Intranet | All rights reserved.</p>
+</footer>
+
+<script>
+    // Hardcoded credentials for users
+    const users = [
+        {
+            email: "manager@make-it-all.co.uk",
+            password: "ManagerPass123!",
+            role: "Manager"
+        },
+        {
+            email: "teamleader@make-it-all.co.uk",
+            password: "TeamLeadPass123!",
+            role: "Team Leader"
+        },
+        {
+            email: "employee@make-it-all.co.uk",
+            password: "EmployeePass123!",
+            role: "Employee"
+        },
+        {
+            email: "admin@make-it-all.co.uk",
+            password: "AdminPass123!",
+            role: "Admin"
+        }
+    ];
+	function validateEmail(email) {
+		const emailPattern = /^[a-zA-Z0-9._%+-]+@make-it-all\.co\.uk$/;
+		return emailPattern.test(email);
+}
+	function validatePassword(password) {
+		const passwordPattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{12,}$/;
+		return passwordPattern.test(password);
+}
+	const passwordInput = document.getElementById('password');
+    const togglePasswordIcon = document.getElementById('togglePassword');
+
+	document.getElementById("togglePassword").addEventListener("click", function () {
+            const passwordField = document.getElementById("password");
+            const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+            passwordField.setAttribute("type", type);
+            this.classList.toggle("fa-eye-slash");
+        });
+
+
+
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent form from submitting
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const errorMessage = document.getElementById("errorMessage");
+		
+		// Check if email format is valid
+		if (!validateEmail(email)) {
+			errorMessage.textContent = "Please enter a valid email (must end with @make-it-all.co.uk).";
+			return;
+		}
+
+        // Check if password is strong enough
+		if (!validatePassword(password)) {
+			errorMessage.textContent = "Password must be at least 12 characters long and contain 1 uppercase letter, 1 number, and 1 symbol.";
+			return;
+		}
+
+        // Validate email and password against hardcoded users
+        const user = users.find(u => u.email === email && u.password === password);
+
+        if (user) {
+            // Successful login
+            errorMessage.textContent = "";
+            //alert(`Welcome, ${user.role}!`);
+
+            // Redirect based on role (this can be customized)
+            if (user.role === "Manager") {
+                window.location.href = "./manager/manager-dashboard.html";
+            } else if (user.role === "Team Leader") {
+                window.location.href = "./team-leader/team-leader-dashboard.html";
+            } else if (user.role ==="Employee") {
+                window.location.href = "./employee/employee-dashboard.html";
+            } else {
+                window.location.href="./admin/admin-dashboard.html"
+            }
+        } else {
+            // Invalid credentials
+            errorMessage.textContent = "Invalid email or password.";
+        }
+    });
+</script>
+
+</body>
+</html>

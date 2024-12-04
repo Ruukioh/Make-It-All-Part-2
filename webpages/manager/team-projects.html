@@ -1,0 +1,409 @@
+<!-- 
+=========================================================
+ Light Bootstrap Dashboard - v2.0.1
+=========================================================
+
+ Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard
+ Copyright 2019 Creative Tim (https://www.creative-tim.com)
+ Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE)
+
+ Coded by Creative Tim
+
+=========================================================
+
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  -->
+
+ <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Make It All</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!-- Fonts and icons -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar" data-color="grey">
+
+            <!-- 
+            When using the page template to create each page:
+            - remove class="nav-item active" from <li> of dashboard (unless you're creating the dashboard)
+            - add class="nav-item actiev" to the <li> of the page you are creating
+            -->
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <img style="height: 100%; width: 100%; object-fit: contain" src="../logo.png">
+                </div>
+
+                <ul class="nav">
+                    <li>
+                        <a class="nav-link" href="./manager-dashboard.html">
+                            <i class="nc-icon nc-chart-pie-35"></i>
+                            <p>My Dashboard</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./team-projects.html">
+                            <i class="nc-icon nc-bag"></i>
+                            <p>Team Projects</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="./notifications.html">
+                            <i class="nc-icon nc-bell-55"></i>
+                            <p>My Notifications</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="./user-profile.html">
+                            <i class="nc-icon nc-circle-09"></i>
+                            <p>My Profile</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="./shared-knowledge.html">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>Shared Knowledge</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="./forum.html">
+                            <i class="nc-icon nc-notes"></i>
+                            <p>Forum</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg " color-on-scroll="500">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#pablo"> Dashboard </a>
+                    <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <ul class="nav navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" data-toggle="dropdown">
+                                    <span class="d-lg-none">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="dropdown nav-item">
+                                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                                    <i class="nc-icon nc-bell-55"></i>
+                                    <span class="notification">5</span>
+                                    <span class="d-lg-none">Notification</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">New Team Member!</a>
+                                    <a class="dropdown-item" href="#">New Project Created!</a>
+                                    <a class="dropdown-item" href="#">Task Deadline Overdue!</a>
+                                    <a class="dropdown-item" href="#">Moderation Request!</a>
+                                    <a class="dropdown-item" href="#">Task Deadline Approaching!</a>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../login.html">
+                                    <span class="no-icon">Log out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+
+
+            <!-- Insert Page Content Below -->
+
+
+             
+            <div class="content">
+                <div class="container-fluid">
+                   <h3 class="card-title">Current Ongoing Projects</h3>
+                   <p class="card-category">Click on a project to view details</p>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                           <div class="card project-card shadow-sm">
+                               <div class="card-header">
+                                   <h4 class="card-title text-center">Project 1</h4>
+                               </div>
+                               <div class="card-body text-center">
+                                   <a href="#projectAlpha" role="button" data-toggle="collapse"
+                                       aria-expanded="false" aria-controls="projectAlpha">
+                                       <img src="../../assets/img/apple-app-store-icon-smartphone-other-icons-e-shopping-applications-141154663.png"
+                                           alt="Project Alpha" class="img-fluid project-image mb-3">
+                                       <h5 class="card-title">Update Mobile App</h5>
+                                   </a>
+                               </div>
+                               <div class="collapse" id="projectAlpha">
+                                   <div class="card-body">
+                                       <p>Develop and test the new version of the app with 2 other team
+                                           members. Release the new software update to the App Store.</p>
+                                       <ul>
+                                           <li>All bugs must be fixed.</li>
+                                           <li>Introduce new feature of Face ID to enter the app.</li>
+                                       </ul>
+                                   </div>
+                                   <div class="modal-footer">
+                                       <p class="title"></p>
+                                       <a class="btn btn-info btn-fill btn-simple" data-toggle="modal" data-target="#myModal1" href="#pablo" 
+                                       data-project-id="1"
+                                          onclick="showProjectDetails(this)">
+                                           View Project Details
+                                       </a>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-4 mb-4">
+                           <div class="card project-card shadow-sm">
+                               <div class="card-header ">
+                                   <h4 class="card-title text-center">Project 2</h4>
+                               </div>
+                               <div class="card-body text-center">
+                                   <a href="#projectBeta" role="button" data-toggle="collapse"
+                                       aria-expanded="false" aria-controls="projectBeta">
+                                       <img src="../../assets/img/istockphoto-1352462896-612x612.jpg"
+                                           alt="Report on E-Learning" class="img-fluid project-image mb-3">
+                                       <h5 class="card-title">Report on E-Learning</h5>
+                                   </a>
+                               </div>
+                               <div class="collapse" id="projectBeta">
+                                   <div class="card-body">
+                                       <p>Complete the required E-Learning on Copyright Compliance, then write
+                                           an email summarising this to show understanding.</p>
+                                       <ul>
+                                           <li>Send the email to all other staff to raise awareness.</li>
+                                           <li>Ensure all key points are addressed.</li>
+                                       </ul>
+                                   </div>
+                                   <div class="modal-footer">
+                                       <p class="title"></p>
+                                       <a class="btn btn-info btn-fill btn-simple" data-toggle="modal" data-target="#myModal1" href="#pablo" 
+                                       data-project-id="2"
+                                          onclick="showProjectDetails(this)">
+                                           View Project Details
+                                       </a>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-4 mb-4">
+                           <div class="card project-card shadow-sm">
+                               <div class="card-header ">
+                                   <h4 class="card-title text-center">Project 3</h4>
+                               </div>
+                               <div class="card-body text-center">
+                                   <a href="#projectGamma" role="button" data-toggle="collapse"
+                                       aria-expanded="false" aria-controls="projectGamma">
+                                       <img src="../../assets/img/GettyImages-1435044085.webp" alt="Project Gamma"
+                                           class="img-fluid project-image mb-3">
+                                       <h5 class="card-title">Requirements and Resource Planning</h5>
+                                   </a>
+                               </div>
+                               <div class="collapse" id="projectGamma">
+                                   <div class="card-body">
+                                       <p>Plan the requirements for our upcoming program along with 4 other
+                                           team members.</p>
+                                       <ul>
+                                           <li>Consider resource allocation.</li>
+                                           <li>Meet with client to discuss.</li>
+                                       </ul>
+                                   </div>
+                                   <div class="modal-footer">
+                                       <p class="title"></p>
+                                       <a class="btn btn-info btn-fill btn-simple" data-toggle="modal" data-target="#myModal1" href="#pablo" 
+                                       data-project-id="3"
+                                          onclick="showProjectDetails(this)">
+                                           View Project Details
+                                       </a>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                           <div class="modal-dialog" role="document">
+                               <div class="modal-content">
+                                   <div class="modal-header">
+                                       <h4 class="modal-title" id="projectName"></h4>
+                                   </div>
+                                   <div class="modal-body">
+                                       <p><strong>Tasks Completed:</strong> <span id="completedTasks"></span></p>
+                                       <p><strong>Tasks Ongoing:</strong> <span id="ongoingTasks"></span></p>
+                                       <p><strong>Tasks To:</strong> <span id="notStartedTasks"></span></p>
+                                       <p><strong>Deadline:</strong> <span id="deadlineDate"></span></p>
+                                   </div>
+                                   <div class="modal-footer d-flex justify-content-center">
+                                       <!-- Close Button -->
+                                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                       
+                                       <!-- View Full Project Details Button -->
+                                       <button type="button" class="btn btn-primary ml-5" onclick="redirectToProjectDetails()">View Full Project Details</button>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <!--
+                       <div class="col-md-5">
+                           <a class="btn btn-success btn-fill btn-wd" href="create-new-project.html">
+                               Create New Project
+                           </a>
+                       </div>
+                    -->
+                    </div>
+                </div>
+            </div>
+            <style>
+               .project-card {
+                   transition: transform 0.2s;
+                   /* Smooth transition for hover effect */
+               }
+
+               .project-card:hover {
+                   transform: scale(1.05);
+                   /* Slightly scale up on hover */
+                   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                   /* Enhance shadow on hover */
+               }
+
+               .project-image {
+                   height: 150px;
+                   /* Fixed height for consistency */
+                   width: auto;
+                   /* Maintain aspect ratio */
+               }
+           </style>
+            <script>
+               const projectData = {
+                   1: { 
+                       name: 'Project 1',
+                       completedTasks: 39, 
+                       ongoingTasks: 15, 
+                       notStartedTasks: 6,
+                       deadlineDate: "19/11/24"
+                   },
+                   2: { 
+                       name: 'Project 2', 
+                       completedTasks: 37, 
+                       ongoingTasks: 7, 
+                       notStartedTasks: 6,
+                       deadlineDate: "15/11/24"
+                   },
+                   3: { 
+                       name: 'Project 3', 
+                       completedTasks: 27, 
+                       ongoingTasks: 3, 
+                       notStartedTasks: 0,
+                       deadlineDate: "11/11/24"
+                   },
+                   // Add more projects here
+               };
+           
+               function showProjectDetails(button) {
+                   const projectId = button.getAttribute('data-project-id');
+                   const project = projectData[projectId];
+           
+                   if (project) {
+                       document.getElementById('projectName').innerText = project.name;
+                       document.getElementById('completedTasks').innerText = project.completedTasks;
+                       document.getElementById('ongoingTasks').innerText = project.ongoingTasks;
+                       document.getElementById('notStartedTasks').innerText = project.notStartedTasks;
+                       document.getElementById('deadlineDate').innerText = project.deadlineDate;
+
+                       document.getElementById('myModal1').setAttribute('data-current-project-id', projectId);
+                   }
+               }
+
+               function redirectToProjectDetails() {
+                   // Get the current project ID from the modal attribute
+                   const projectId = document.getElementById('myModal1').getAttribute('data-current-project-id');
+
+                   // Redirect to project details page with the project ID in the query string
+                   window.location.href = `project-details.html?projectId=${projectId}`;
+               }
+           </script>
+        
+        
+
+
+
+
+
+            <!-- End of Page Content-->
+
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav>
+                        
+                        <p class="copyright text-center">
+                            ©
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
+                            <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                        </p>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+<!--   Core JS Files   -->
+<script src="../../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="../../assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!--  Chartist Plugin  -->
+<script src="../../assets/js/plugins/chartist.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="../../assets/js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
+<script src="../../assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
+<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
+<script src="../../assets/js/demo.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        // Javascript method's body can be found in assets/js/demos.js
+        demo.initDashboardPageCharts();
+    });
+</script>
+
+</html>
